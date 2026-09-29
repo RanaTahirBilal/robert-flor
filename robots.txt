@@ -1,0 +1,3 @@
+# WHILE ON github.io: keep Disallow. WHEN MOVED TO HIS OWN DOMAIN: change to "Allow: /".
+User-agent: *
+Disallow: /
