@@ -1,0 +1,237 @@
+/* ============================================================
+   Robert Francis Flor, own stylesheet. Loaded last so it wins.
+   Prefix: rf-
+   ============================================================ */
+
+:root{
+  /* grounds */
+  --rf-ground:#0C0C0F;
+  --rf-ground-2:#141419;
+  --rf-line:rgba(236,232,225,.14);
+
+  /* three accents, measured against --rf-ground (#0C0C0F) */
+  --rf-ink:#ECE8E1;        /* 15.99 on ground, 15.03 on ground-2 */
+  --rf-muted:#ADA79F;      /*  8.19 on ground,  7.70 on ground-2 */
+  --rf-acc:#E2A85C;        /*  9.29 on ground. Rules, icons, 24px+ figures */
+  --rf-acc-lift:#EEBE7E;   /* 11.44 on ground. Small text on dark */
+  --rf-acc-ink:#14100A;    /*  9.01 on #E2A85C. Small text on the amber button */
+
+  --rf-sans:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+}
+
+html,body{background:var(--rf-ground);}
+body{font-family:var(--rf-sans);color:var(--rf-ink);-webkit-font-smoothing:antialiased;}
+.bg-black,.bg-dark-black,.body_wrapper,.inner-content{background-color:var(--rf-ground)!important;}
+a{color:var(--rf-acc-lift);}
+a:hover,a:focus{color:var(--rf-ink);}
+:focus-visible{outline:2px solid var(--rf-acc);outline-offset:3px;}
+img{max-width:100%;}
+
+/* ---------- loader ---------- */
+.loader{background:var(--rf-ground);}
+
+/* ---------- side nav: wordmark replaces the demo logo image ---------- */
+.rf-mark{display:block;text-decoration:none;line-height:1.25;}
+.rf-mark b{display:block;font-size:15px;font-weight:700;letter-spacing:.16em;color:var(--rf-ink);text-transform:uppercase;}
+.rf-mark i{display:block;font-style:normal;font-size:10px;letter-spacing:.22em;color:var(--rf-acc-lift);text-transform:uppercase;margin-top:5px;}
+.rf-mark:hover b{color:var(--rf-acc-lift);}
+.side_nav,.side_menu,.my-sticky-nav{background:var(--rf-ground-2);}
+.side-nav-menu .nav-menu .nav-link{color:var(--rf-muted)!important;}
+.side-nav-menu .nav-menu .nav-link.active,
+.side-nav-menu .nav-menu .nav-link:hover{color:var(--rf-acc-lift)!important;}
+.side-nav-menu .nav-menu .nav-item span,
+.side-nav-menu .nav-menu .nav-item p{color:var(--rf-muted)!important;}
+.rf-navlinks{list-style:none;padding:0;margin:26px 0 0;}
+.rf-navlinks li{margin-bottom:9px;}
+.rf-navlinks a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rf-muted);text-decoration:none;border-bottom:1px solid transparent;}
+.rf-navlinks a:hover{color:var(--rf-acc-lift);border-bottom-color:currentColor;}
+.rites-res{color:var(--rf-muted)!important;font-size:11px;line-height:1.7;}
+.rites-res span{color:var(--rf-ink)!important;}
+header.d-block .navbar{background:var(--rf-ground-2);}
+.broad{background:var(--rf-ground-2);}
+
+/* ---------- shared type ---------- */
+.rf-eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--rf-acc-lift);margin-bottom:20px;}
+.rf-eyebrow span{display:inline-block;width:28px;height:2px;background:var(--rf-acc);
+  margin-right:10px;margin-bottom:4px;vertical-align:middle;}
+.rf-h2{font-size:34px;line-height:1.28;font-weight:700;color:var(--rf-ink);margin-bottom:22px;text-wrap:balance;}
+.rf-h3{font-size:20px;font-weight:600;color:var(--rf-ink);margin-bottom:12px;}
+.rf-p{font-size:16px;line-height:1.85;color:var(--rf-muted);margin-bottom:18px;}
+.rf-p strong{color:var(--rf-ink);font-weight:600;}
+.rf-sec{padding:96px 0;}
+.rf-measure{max-width:64ch;}
+@media (max-width:767px){.rf-h2{font-size:26px}.rf-sec{padding:64px 0}}
+
+/* ---------- hero band above the gallery ---------- */
+.rf-hero{padding:110px 0 54px;background:var(--rf-ground);}
+.rf-hero h1{font-size:50px;line-height:1.1;font-weight:700;letter-spacing:-.01em;color:var(--rf-ink);margin:0 0 20px;text-wrap:balance;}
+.rf-hero .rf-lede{font-size:19px;line-height:1.75;color:var(--rf-muted);max-width:60ch;margin:0;}
+.rf-hero .rf-rule{width:64px;height:3px;background:var(--rf-acc);margin:0 0 30px;}
+.rf-hero .rf-where{margin-top:26px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rf-acc-lift);}
+@media (max-width:767px){.rf-hero{padding:86px 0 40px}.rf-hero h1{font-size:33px}.rf-hero .rf-lede{font-size:17px}}
+
+/* ---------- gallery grid ---------- */
+.portfolio-sec .image-area img{width:100%;height:100%;object-fit:cover;display:block;}
+.portfolio-sec .overlay-hover{background:rgba(12,12,15,.78);}
+.portfolio-sec .overlay-detail h4{font-size:17px;font-weight:600;color:var(--rf-ink);}
+.portfolio-sec .overlay-detail span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--rf-acc-lift);}
+.portfolio-sec .overlay-detail i{color:var(--rf-acc-lift);}
+
+/* the disclosure, carried on every site in these words */
+.rf-disclose{background:var(--rf-ground-2);border-top:1px solid var(--rf-line);
+  border-bottom:1px solid var(--rf-line);padding:22px 0;}
+.rf-disclose p{margin:0;font-size:14px;line-height:1.75;color:var(--rf-muted);}
+.rf-disclose b{color:var(--rf-ink);font-weight:600;}
+
+/* ---------- about cards ---------- */
+.services-sec .rf-card{background:var(--rf-ground-2);border:1px solid var(--rf-line);
+  border-radius:4px;padding:38px 30px;height:100%;text-align:left;}
+.services-sec .rf-card .rf-ico{font-size:30px;color:var(--rf-acc);display:block;margin-bottom:20px;}
+.services-sec .rf-card h3{font-size:18px;font-weight:600;color:var(--rf-ink);margin-bottom:12px;}
+.services-sec .rf-card p{font-size:15px;line-height:1.8;color:var(--rf-muted);margin:0;}
+.rf-cardrow{display:flex;flex-wrap:wrap;gap:24px;margin-top:54px;}
+.rf-cardrow>div{flex:1 1 270px;}
+
+/* ---------- career, replaces the demo progress bars ---------- */
+.skill-sec .skill-banner img{width:100%;height:100%;object-fit:cover;display:block;}
+.rf-facts{list-style:none;padding:0;margin:30px 0 0;}
+.rf-facts li{padding:16px 0;border-top:1px solid var(--rf-line);display:flex;flex-wrap:wrap;gap:6px 22px;}
+.rf-facts li:last-child{border-bottom:1px solid var(--rf-line);}
+.rf-facts .rf-when{flex:0 0 150px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--rf-acc-lift);padding-top:3px;}
+.rf-facts .rf-what{flex:1 1 220px;font-size:16px;line-height:1.7;color:var(--rf-ink);}
+.rf-pad{padding:96px 8% 96px 8%;}
+@media (max-width:991px){.rf-pad{padding:56px 24px}}
+
+/* ---------- statement band ---------- */
+.rf-band{background:var(--rf-ground-2);padding:78px 0;text-align:center;}
+.rf-band p{font-size:26px;line-height:1.6;font-weight:500;color:var(--rf-ink);
+  max-width:52ch;margin:0 auto;text-wrap:balance;}
+.rf-band .rf-eyebrow{margin-bottom:26px;}
+@media (max-width:767px){.rf-band p{font-size:20px}}
+
+/* ---------- works carousel ---------- */
+.project-sec .project-area{position:relative;}
+.project-sec .project-area .project-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.project-sec .project-area .project-img::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(9,9,12,.93) 0%,rgba(9,9,12,.86) 42%,rgba(9,9,12,.30) 74%,rgba(9,9,12,.14) 100%);}
+.project-sec .project-area .project-detail{z-index:2;}
+.project-sec .project-detail .rf-eyebrow{margin-bottom:16px;}
+.project-sec .project-detail h2{font-size:32px;font-weight:700;color:var(--rf-ink);margin-bottom:16px;line-height:1.25;}
+.project-sec .project-detail p{font-size:16px;line-height:1.8;color:var(--rf-ink);margin-bottom:26px;}
+.project-sec .project-links a{color:var(--rf-ink);}
+.project-sec .project-links a:hover{color:var(--rf-acc-lift);}
+@media (max-width:767px){.project-sec .project-detail h2{font-size:23px}
+  .project-sec .project-area .project-img::after{background:rgba(9,9,12,.86)}}
+
+/* ---------- buttons ---------- */
+.rf-btn{display:inline-block;background:var(--rf-acc);color:var(--rf-acc-ink);
+  font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:14px 30px;border-radius:999px;border:0;text-decoration:none;cursor:pointer;}
+.rf-btn:hover,.rf-btn:focus{background:var(--rf-acc-lift);color:var(--rf-acc-ink);text-decoration:none;}
+.rf-btn-ghost{display:inline-block;background:transparent;color:var(--rf-acc-lift);
+  border:1px solid var(--rf-acc);font-size:13px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;padding:13px 28px;border-radius:999px;text-decoration:none;}
+.rf-btn-ghost:hover{background:var(--rf-acc);color:var(--rf-acc-ink);text-decoration:none;}
+
+/* ---------- selected works list ---------- */
+.rf-list{list-style:none;padding:0;margin:44px 0 0;}
+.rf-list li{padding:20px 0;border-top:1px solid var(--rf-line);
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;}
+.rf-list li:last-child{border-bottom:1px solid var(--rf-line);}
+.rf-list .rf-title{flex:1 1 260px;font-size:19px;font-weight:600;color:var(--rf-ink);}
+.rf-list .rf-note{flex:2 1 300px;font-size:15px;line-height:1.7;color:var(--rf-muted);}
+.rf-list .rf-yr{flex:0 0 66px;font-size:14px;color:var(--rf-acc-lift);
+  font-variant-numeric:tabular-nums;text-align:right;}
+
+/* ---------- recognition ---------- */
+.rf-grid2{display:flex;flex-wrap:wrap;gap:44px;margin-top:44px;}
+.rf-grid2>div{flex:1 1 320px;}
+.rf-awards{list-style:none;padding:0;margin:0;}
+.rf-awards li{padding:18px 0;border-top:1px solid var(--rf-line);font-size:16px;line-height:1.7;color:var(--rf-ink);}
+.rf-awards li:last-child{border-bottom:1px solid var(--rf-line);}
+.rf-awards li span{display:block;font-size:13px;color:var(--rf-muted);margin-top:5px;}
+
+/* ---------- contact ---------- */
+.rf-contact-grid{display:flex;flex-wrap:wrap;gap:54px;}
+.rf-contact-grid>div{flex:1 1 320px;}
+.rf-meta{list-style:none;padding:0;margin:26px 0 0;}
+.rf-meta li{font-size:16px;line-height:1.7;color:var(--rf-ink);margin-bottom:14px;}
+.rf-meta li i{color:var(--rf-acc);margin-right:12px;font-size:18px;vertical-align:-2px;}
+.rf-meta li a{color:var(--rf-acc-lift);}
+.rf-field{margin-bottom:18px;}
+.rf-field label{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--rf-muted);margin-bottom:8px;}
+.rf-field input,.rf-field textarea{width:100%;background:var(--rf-ground-2);
+  border:1px solid var(--rf-line);border-radius:4px;padding:13px 15px;
+  color:var(--rf-ink);font-family:var(--rf-sans);font-size:15px;}
+.rf-field input:focus,.rf-field textarea:focus{border-color:var(--rf-acc);outline:none;}
+.rf-field textarea{min-height:140px;resize:vertical;}
+.rf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+.rf-formnote{font-size:13px;line-height:1.7;color:var(--rf-muted);margin-top:16px;}
+
+/* ---------- footer ---------- */
+.rf-foot{background:var(--rf-ground-2);border-top:1px solid var(--rf-line);padding:44px 0;}
+.rf-foot p{margin:0;font-size:14px;line-height:1.8;color:var(--rf-muted);}
+.rf-foot .rf-credit{margin-top:16px;font-size:12px;line-height:1.5;letter-spacing:.02em;}
+.rf-foot .rf-credit a{color:var(--rf-muted);text-decoration:none;border-bottom:1px solid currentColor;}
+.rf-foot .rf-credit a:hover{color:var(--rf-ink);}
+
+/* ---------- go top ---------- */
+.go-top{background:var(--rf-acc);color:var(--rf-acc-ink);}
+.go-top i{color:var(--rf-acc-ink);}
+
+/* ---------- 404 ---------- */
+.rf-404{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 16px;}
+.rf-404 .rf-code{font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--rf-acc-lift);margin-bottom:18px;}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important;}
+}
+
+/* ============================================================
+   Fixes measured from the first render pass
+   ============================================================ */
+
+/* the demo's .side_nav only paints as tall as its content */
+.side_nav,.my-sticky-nav,.side_menu{min-height:100vh;}
+/* .rf-navlinks inherited no indent and clipped at the panel edge */
+.rf-navlinks{padding-left:34px;padding-right:24px;}
+.rites-res{padding-left:34px;padding-right:24px;}
+@media (max-width:767px){.side_nav,.my-sticky-nav,.side_menu{min-height:0;}}
+
+/* .rf-band p{font-size:26px} was beating .rf-eyebrow on specificity */
+.rf-band .rf-eyebrow{font-size:12px;line-height:1.4;font-weight:600;letter-spacing:.2em;}
+
+/* the demo positions .project-detail absolute with no width, so it shrank to fit */
+.project-sec .project-area .project-detail{width:100%;left:0;}
+.project-sec .project-detail .rf-eyebrow{font-size:12px;}
+
+/* portrait: the text column sets the row height, so cover was cropping to the eyes */
+.skill-sec .skill-banner{min-height:520px;}
+.skill-sec .skill-banner img{object-position:center 22%;}
+
+/* the demo numbered the nav with three elements and a -5px margin so the glyphs
+   overlapped. One element instead, so nothing sits on top of anything. */
+.side-nav-menu .nav-menu li .rf-num{display:inline-block;width:auto;margin:0 10px 0 0;
+  font-size:24px;font-weight:600;color:var(--rf-muted);letter-spacing:.02em;
+  font-variant-numeric:tabular-nums;}
+.side-nav-menu .nav-menu li:hover .rf-num{color:var(--rf-acc-lift);}
+
+/* the demo's mobile brand slot is sized for a 70px logo image; a wordmark
+   overflowed it and made the whole page scroll sideways */
+header .navbar{flex-wrap:nowrap;padding-left:16px;padding-right:16px;}
+header .navbar .navbar-brand.rf-mark{width:auto;max-width:none;height:auto;flex:0 0 auto;
+  white-space:nowrap;margin-left:auto;margin-right:0;padding:0;}
+header .navbar .rf-mark b{font-size:13px;}
+header .navbar .rf-mark i{font-size:9px;}
+.broad .rf-mark{padding:0 0 18px;}
+
+/* the nav toggles are <button> now, so the UA chrome has to go */
+.my_tog,.my_nav_tog{background:transparent;border:0;padding:0;-webkit-appearance:none;appearance:none;}
+.my_nav_tog span,.my_tog span{background-color:var(--rf-ink);}
+
+/* breathing room under the side nav link list */
+.rites-res{margin-top:22px;}
